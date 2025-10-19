@@ -4,6 +4,7 @@ services:
     env: docker
     plan: free
     dockerfilePath: ./Dockerfile
+    autoDeploy: true
     envVars:
       - key: N8N_BASIC_AUTH_ACTIVE
         value: "true"
@@ -20,6 +21,14 @@ services:
       - key: N8N_HOST
         value: "0.0.0.0"
       - key: N8N_PORT
-        value: "10000"
+        value: "5678"
       - key: PORT
-        value: "10000"
+        value: "5678"
+      - key: DB_SQLITE_POOL_SIZE
+        value: "5"
+      - key: N8N_RUNNERS_ENABLED
+        value: "true"
+      - key: N8N_BLOCK_ENV_ACCESS_IN_NODE
+        value: "false"
+      - key: N8N_GIT_NODE_DISABLE_BARE_REPOS
+        value: "true"
