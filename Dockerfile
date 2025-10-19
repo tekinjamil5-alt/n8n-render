@@ -1,0 +1,9 @@
+FROM n8nio/n8n:latest
+
+ENV N8N_BASIC_AUTH_ACTIVE=true
+ENV N8N_BASIC_AUTH_USER=admin
+ENV N8N_BASIC_AUTH_PASSWORD=admin123
+ENV N8N_ENCRYPTION_KEY=MySuperSecretEncryptionKey
+ENV GENERIC_TIMEZONE=Europe/Brussels
+
+CMD ["n8n", "start"]
